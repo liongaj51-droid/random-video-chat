@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Random Video Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand">Random<span>Chat</span></div><div id="status">Siap</div></header>
+<main>
+  <section class="videos">
+    <div class="video-card"><video id="remoteVideo" autoplay playsinline></video><div class="label">Orang lain</div></div>
+    <div class="video-card"><video id="localVideo" autoplay muted playsinline></video><div class="label">Kamu</div></div>
+  </section>
+  <section class="controls">
+    <button id="startBtn">🎥 Mulai</button>
+    <button id="nextBtn" disabled>⏭ Next</button>
+    <button id="muteBtn" disabled>🎤 Mic</button>
+    <button id="camBtn" disabled>📷 Kamera</button>
+  </section>
+  <section class="chat">
+    <div id="messages"></div>
+    <div class="chat-input"><input id="messageInput" placeholder="Tulis pesan..." disabled><button id="sendBtn" disabled>Kirim</button></div>
+  </section>
+</main>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
